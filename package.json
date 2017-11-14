@@ -2,6 +2,12 @@
 	"name": "angular-loaders",
 	"version": "0.0.0",
 	"license": "MIT",
+	"author": {
+		"name": "Preston Lamb",
+		"email": "preston.j.lamb@gmail.com",
+		"url": "http://www.prestonlamb.com"
+	},
+	"keywords": ["angular", "loaders", "css loaders"],
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
