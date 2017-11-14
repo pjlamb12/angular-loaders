@@ -13,7 +13,7 @@
 		<ng-rotating-cubes [spinnerColor]="spinnerColor"></ng-rotating-cubes>
 	</div>
 	<div *ngSwitchCase="spinnerTypes.growingCircle">
-		<div [style.backgroundColor]="spinnerColor" class="spinner growing-circle"></div>
+		<ng-growing-circle [spinnerColor]="spinnerColor"></ng-growing-circle>
 	</div>
 	<div *ngSwitchCase="spinnerTypes.ellipsis">
 		<div class="spinner ellipsis">
