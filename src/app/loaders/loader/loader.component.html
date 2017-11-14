@@ -1,0 +1,56 @@
+{{ spinnerType }}
+<div [ngSwitch]="spinnerType">
+	<div *ngSwitchCase="spinnerTypes.rotatingSquare">
+		<div [style.backgroundColor]="spinnerColor" class="spinner rotating-square"></div>
+	</div>
+	<div *ngSwitchCase="spinnerTypes.pulsingCircles">
+		<div class="spinner pulsing-circles">
+			<div [style.backgroundColor]="spinnerColor" class="double-bounce1"></div>
+			<div [style.backgroundColor]="spinnerColor" class="double-bounce2"></div>
+		</div>
+	</div>
+	<div *ngSwitchCase="spinnerTypes.growingBars">
+		<div class="spinner growing-bars">
+			<div [style.backgroundColor]="spinnerColor" class="rect1"></div>
+			<div [style.backgroundColor]="spinnerColor" class="rect2"></div>
+			<div [style.backgroundColor]="spinnerColor" class="rect3"></div>
+			<div [style.backgroundColor]="spinnerColor" class="rect4"></div>
+			<div [style.backgroundColor]="spinnerColor" class="rect5"></div>
+		</div>
+	</div>
+	<div *ngSwitchCase="spinnerTypes.rotatingCubes">
+		<div class="spinner rotating-cubes">
+			<div [style.backgroundColor]="spinnerColor" class="cube1"></div>
+			<div [style.backgroundColor]="spinnerColor" class="cube2"></div>
+		</div>
+	</div>
+	<div *ngSwitchCase="spinnerTypes.growingCircle">
+		<div [style.backgroundColor]="spinnerColor" class="spinner growing-circle"></div>
+	</div>
+	<div *ngSwitchCase="spinnerTypes.ellipsis">
+		<div class="spinner ellipsis">
+			<div [style.backgroundColor]="spinnerColor" class="bounce1"></div>
+			<div [style.backgroundColor]="spinnerColor" class="bounce2"></div>
+			<div [style.backgroundColor]="spinnerColor" class="bounce3"></div>
+		</div>
+	</div>
+	<div *ngSwitchCase="spinnerTypes.cubeGrid">
+		<div class="sk-cube-grid cube-grid">
+			<div [style.backgroundColor]="spinnerColor" class="sk-cube sk-cube1"></div>
+			<div [style.backgroundColor]="spinnerColor" class="sk-cube sk-cube2"></div>
+			<div [style.backgroundColor]="spinnerColor" class="sk-cube sk-cube3"></div>
+			<div [style.backgroundColor]="spinnerColor" class="sk-cube sk-cube4"></div>
+			<div [style.backgroundColor]="spinnerColor" class="sk-cube sk-cube5"></div>
+			<div [style.backgroundColor]="spinnerColor" class="sk-cube sk-cube6"></div>
+			<div [style.backgroundColor]="spinnerColor" class="sk-cube sk-cube7"></div>
+			<div [style.backgroundColor]="spinnerColor" class="sk-cube sk-cube8"></div>
+			<div [style.backgroundColor]="spinnerColor" class="sk-cube sk-cube9"></div>
+		</div>
+	</div>
+	<div *ngSwitchCase="spinnerTypes.rotatingDots">
+		<div class="spinner rotating-dots">
+			<div [style.backgroundColor]="spinnerColor" class="dot1"></div>
+			<div [style.backgroundColor]="spinnerColor" class="dot2"></div>
+		</div>
+	</div>
+</div>
