@@ -1,5 +1,5 @@
 {
-	"name": "angular-loaders",
+	"name": "ng-loaders",
 	"description": "Angular component to add CSS loaders to your application",
 	"version": "1.0.0",
 	"license": "MIT",
