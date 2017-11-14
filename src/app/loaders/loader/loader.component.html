@@ -4,10 +4,7 @@
 		<ng-rotating-square [spinnerColor]="spinnerColor"></ng-rotating-square>
 	</div>
 	<div *ngSwitchCase="spinnerTypes.pulsingCircles">
-		<div class="spinner pulsing-circles">
-			<div [style.backgroundColor]="spinnerColor" class="double-bounce1"></div>
-			<div [style.backgroundColor]="spinnerColor" class="double-bounce2"></div>
-		</div>
+		<ng-pulsing-circles [spinnerColor]="spinnerColor"></ng-pulsing-circles>
 	</div>
 	<div *ngSwitchCase="spinnerTypes.growingBars">
 		<div class="spinner growing-bars">
