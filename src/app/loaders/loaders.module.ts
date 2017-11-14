@@ -6,13 +6,14 @@ import { PulsingCirclesComponent } from './pulsing-circles/pulsing-circles.compo
 import { GrowingBarsComponent } from './growing-bars/growing-bars.component';
 import { RotatingCubesComponent } from './rotating-cubes/rotating-cubes.component';
 import { GrowingCircleComponent } from './growing-circle/growing-circle.component';
+import { EllipsisComponent } from './ellipsis/ellipsis.component';
 
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [LoaderComponent, RotatingSquareComponent, PulsingCirclesComponent, GrowingBarsComponent, RotatingCubesComponent, GrowingCircleComponent],
+  declarations: [LoaderComponent, RotatingSquareComponent, PulsingCirclesComponent, GrowingBarsComponent, RotatingCubesComponent, GrowingCircleComponent, EllipsisComponent],
   exports: [LoaderComponent]
 })
 export class LoadersModule { }

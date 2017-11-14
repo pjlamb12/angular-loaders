@@ -16,11 +16,7 @@
 		<ng-growing-circle [spinnerColor]="spinnerColor"></ng-growing-circle>
 	</div>
 	<div *ngSwitchCase="spinnerTypes.ellipsis">
-		<div class="spinner ellipsis">
-			<div [style.backgroundColor]="spinnerColor" class="bounce1"></div>
-			<div [style.backgroundColor]="spinnerColor" class="bounce2"></div>
-			<div [style.backgroundColor]="spinnerColor" class="bounce3"></div>
-		</div>
+		<ng-ellipsis [spinnerColor]="spinnerColor"></ng-ellipsis>
 	</div>
 	<div *ngSwitchCase="spinnerTypes.cubeGrid">
 		<div class="sk-cube-grid cube-grid">
