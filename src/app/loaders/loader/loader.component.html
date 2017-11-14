@@ -22,10 +22,7 @@
 		<ng-cube-grid [spinnerColor]="spinnerColor"></ng-cube-grid>
 	</div>
 	<div *ngSwitchCase="spinnerTypes.rotatingDots">
-		<div class="spinner rotating-dots">
-			<div [style.backgroundColor]="spinnerColor" class="dot1"></div>
-			<div [style.backgroundColor]="spinnerColor" class="dot2"></div>
-		</div>
+		<ng-rotating-dots [spinnerColor]="spinnerColor"></ng-rotating-dots>
 	</div>
 	<div *ngSwitchDefault>
 		<ng-rotating-square [spinnerColor]="spinnerColor"></ng-rotating-square>
