@@ -1,7 +1,7 @@
 {{ spinnerType }}
 <div [ngSwitch]="spinnerType">
 	<div *ngSwitchCase="spinnerTypes.rotatingSquare">
-		<div [style.backgroundColor]="spinnerColor" class="spinner rotating-square"></div>
+		<ng-rotating-square [spinnerColor]="spinnerColor"></ng-rotating-square>
 	</div>
 	<div *ngSwitchCase="spinnerTypes.pulsingCircles">
 		<div class="spinner pulsing-circles">
@@ -52,5 +52,8 @@
 			<div [style.backgroundColor]="spinnerColor" class="dot1"></div>
 			<div [style.backgroundColor]="spinnerColor" class="dot2"></div>
 		</div>
+	</div>
+	<div *ngSwitchDefault>
+		<ng-rotating-square [spinnerColor]="spinnerColor"></ng-rotating-square>
 	</div>
 </div>

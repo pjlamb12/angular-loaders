@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoaderComponent } from './loader/loader.component';
+import { RotatingSquareComponent } from './rotating-square/rotating-square.component';
 
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [LoaderComponent],
+  declarations: [LoaderComponent, RotatingSquareComponent],
   exports: [LoaderComponent]
 })
 export class LoadersModule { }
