@@ -10,10 +10,7 @@
 		<ng-growing-bars [spinnerColor]="spinnerColor"></ng-growing-bars>
 	</div>
 	<div *ngSwitchCase="spinnerTypes.rotatingCubes">
-		<div class="spinner rotating-cubes">
-			<div [style.backgroundColor]="spinnerColor" class="cube1"></div>
-			<div [style.backgroundColor]="spinnerColor" class="cube2"></div>
-		</div>
+		<ng-rotating-cubes [spinnerColor]="spinnerColor"></ng-rotating-cubes>
 	</div>
 	<div *ngSwitchCase="spinnerTypes.growingCircle">
 		<div [style.backgroundColor]="spinnerColor" class="spinner growing-circle"></div>
