@@ -9,6 +9,10 @@ Import it into your project, and then put it in your app using the selector `ng-
 
 `spinnerColor`: A simple string (red) or hex formatted color (#ff0000). The default color is #333, so if you don't pass anything in, that's what you'll get.
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/YbV8KsHquCTU9663qJEGELrU/pjlamb12/angular-loaders'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/YbV8KsHquCTU9663qJEGELrU/pjlamb12/angular-loaders.svg' />
+</a>
+
 ## Contributing to the Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
