@@ -1,7 +1,7 @@
 {
 	"name": "ng-loaders",
 	"description": "Angular component to add CSS loaders to your application",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"license": "MIT",
 	"author": {
 		"name": "Preston Lamb",
@@ -13,6 +13,7 @@
 		"type": "git",
 		"url": "https://github.com/pjlamb12/angular-loaders"
 	},
+	"homepage": "http://ngl.oss.prestonlamb.com",
 	"keywords": ["angular", "loaders", "css loaders"],
 	"scripts": {
 		"ng": "ng",
