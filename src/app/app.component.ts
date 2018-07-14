@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'app';
+	title = 'app';
+	public spinnerType: string = 'rotating-square';
+
+	setSpinnerType(type: any) {
+		this.spinnerType = type;
+	}
 }
