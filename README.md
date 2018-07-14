@@ -7,7 +7,7 @@ format (#ff0000).
 
 ## Using the Component
 
-Import it into your project, and then put it in your app using the selector `ng-loader`. There are two inputs:
+Import it into your project, and then put it in your app using the selector `ngx-loader`. There are two inputs:
 `spinnerType` and `spinnerColor`.
 
 `spinnerType`: Choose one of the following values: 'rotating-square', 'pulsing-circles', 'growing-bars',
