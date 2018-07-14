@@ -26,4 +26,4 @@ import { RotatingDotsComponent } from './rotating-dots/rotating-dots.component';
 	],
 	exports: [LoaderComponent],
 })
-export class AngularLoadersLibModule {}
+export class NgLoadersModule {}

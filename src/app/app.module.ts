@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularLoadersLibModule } from 'angular-loaders-lib';
+import { NgLoadersModule } from 'angular-loaders-lib';
 
 import { AppComponent } from './app.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
-	declarations: [AppComponent],
-	imports: [BrowserModule, AngularLoadersLibModule],
+	declarations: [AppComponent, NavigationComponent],
+	imports: [BrowserModule, NgLoadersModule],
 	providers: [],
 	bootstrap: [AppComponent],
 })
