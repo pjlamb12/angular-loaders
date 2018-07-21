@@ -19,6 +19,7 @@ export class LoaderComponent implements OnInit {
 		cubeGrid: 'cube-grid',
 		rotatingDots: 'rotating-dots',
 	};
+
 	constructor(@Optional() config: NgLoadersConfig) {
 		this.spinnerColor = config.color;
 		this.spinnerType = config.type;
