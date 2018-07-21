@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Optional } from '@angular/core';
+import { NgLoadersConfig } from '../ng-loaders-config';
 
 @Component({
 	selector: 'ngx-loader',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 	styleUrls: ['./loader.component.scss'],
 })
 export class LoaderComponent implements OnInit {
-	@Input() spinnerType: string = 'rotating-square';
+	@Input() spinnerType: string;
 	@Input() spinnerColor: string;
 	public spinnerTypes = {
 		rotatingSquare: 'rotating-square',
@@ -18,7 +19,10 @@ export class LoaderComponent implements OnInit {
 		cubeGrid: 'cube-grid',
 		rotatingDots: 'rotating-dots',
 	};
-	constructor() {}
+	constructor(@Optional() config: NgLoadersConfig) {
+		this.spinnerColor = config.color;
+		this.spinnerType = config.type;
+	}
 
 	ngOnInit() {}
 }

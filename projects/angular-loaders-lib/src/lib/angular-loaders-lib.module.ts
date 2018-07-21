@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LoaderComponent } from './loader/loader.component';
@@ -10,6 +10,7 @@ import { GrowingCircleComponent } from './growing-circle/growing-circle.componen
 import { EllipsisComponent } from './ellipsis/ellipsis.component';
 import { CubeGridComponent } from './cube-grid/cube-grid.component';
 import { RotatingDotsComponent } from './rotating-dots/rotating-dots.component';
+import { NgLoadersConfig } from './ng-loaders-config';
 
 @NgModule({
 	imports: [CommonModule],
@@ -26,4 +27,11 @@ import { RotatingDotsComponent } from './rotating-dots/rotating-dots.component';
 	],
 	exports: [LoaderComponent],
 })
-export class NgLoadersModule {}
+export class NgLoadersModule {
+	static forRoot(config: NgLoadersConfig): ModuleWithProviders {
+		return {
+			ngModule: NgLoadersModule,
+			providers: [{ provide: NgLoadersConfig, useValue: config }],
+		};
+	}
+}
