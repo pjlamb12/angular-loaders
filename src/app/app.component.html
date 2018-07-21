@@ -28,8 +28,17 @@
   </div>
   <div class="row">
     <div class="col">
+      <br>
       <ngx-loader [spinnerType]="spinnerTypeSelect.value" [spinnerColor]="spinnerColorSelect.value">
       </ngx-loader>
+      <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="test-container">
+        <ngx-loader [coverContainer]="true" overlayColor="#333333" overlayOpacity=".8"></ngx-loader>
+      </div>
     </div>
   </div>
 </div>

@@ -9,6 +9,10 @@ import { NgLoadersConfig } from '../ng-loaders-config';
 export class LoaderComponent implements OnInit {
 	@Input() spinnerType: string;
 	@Input() spinnerColor: string;
+	@Input() coverContainer: boolean;
+	@Input() overlayColor: string;
+	@Input() overlayOpacity: number;
+
 	public spinnerTypes = {
 		rotatingSquare: 'rotating-square',
 		pulsingCircles: 'pulsing-circles',

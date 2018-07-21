@@ -13,10 +13,15 @@ When importing, don't forget to use the `forRoot` method and pass in a config ob
 
     NgLoadersModule.forRoot({ color: 'black', type: 'rotating-square' });
 
-There are two inputs:
-`spinnerType` and `spinnerColor`.
+There are 5 possible inputs:
 
-`spinnerType`: Choose one of the following values: 'rotating-square', 'pulsing-circles', 'growing-bars',
-'rotating-cubes', 'growing-circle', 'ellipsis', 'cube-grid', 'rotating-dots'.
+-   `spinnerType`: Choose one of the following values: 'rotating-square', 'pulsing-circles', 'growing-bars',
+    'rotating-cubes', 'growing-circle', 'ellipsis', 'cube-grid', 'rotating-dots'.
 
-`spinnerColor`: A simple string (red) or hex formatted color (#ff0000).
+-   `spinnerColor`: A simple string (red) or hex formatted color (#ff0000).
+
+-   `coverContainer`: A boolean value to determine if it should fully cover the parent container. Make sure to set the parent container's position to relative.
+
+-   `overlayColor`: A simple string (white) or hex formatted color representing the color of the overlay. The overlay only shows up if `coverContainer` is true. Defaults to #ffffff;
+
+-   `overlayOpacity`: A number representing the opacity of the overlay. The overlay only shows up if `coverContainer` is true. Defaults to 0.5;

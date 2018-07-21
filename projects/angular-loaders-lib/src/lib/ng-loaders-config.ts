@@ -1,7 +1,7 @@
 import { NgLoadersTypes } from './ng-loaders-types.enum';
 export class NgLoadersConfig {
 	color: string;
-	type: string;
+	type: NgLoadersTypes;
 
 	constructor(obj: any = {}) {
 		this.color = obj.color || 'black';

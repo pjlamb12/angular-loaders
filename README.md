@@ -7,12 +7,21 @@ format (#ff0000).
 
 ## Using the Component
 
-Import it into your project, and then put it in your app using the selector `ngx-loader`. There are two inputs:
-`spinnerType` and `spinnerColor`.
+Import it into your project, and then put it in your app using the selector `ngx-loader`.
 
-`spinnerType`: Choose one of the following values: 'rotating-square', 'pulsing-circles', 'growing-bars',
-'rotating-cubes', 'growing-circle', 'ellipsis', 'cube-grid', 'rotating-dots'. The input defaults to 'rotating-square',
-and if you forget to input a value, that's what will show up.
+When importing, don't forget to use the `forRoot` method and pass in a config object with `color` and `type`. Those will be the specified default for your app. Then, when you use the selector with no inputs, that's what you'll get to start with. you'll still be able to override those values if you choose, but this let's you start with the color and loader you want.
 
-`spinnerColor`: A simple string (red) or hex formatted color (#ff0000). The default color is #333, so if you don't pass
-anything in, that's what you'll get.
+    NgLoadersModule.forRoot({ color: 'black', type: 'rotating-square' });
+
+There are 5 possible inputs:
+
+-   `spinnerType`: Choose one of the following values: 'rotating-square', 'pulsing-circles', 'growing-bars',
+    'rotating-cubes', 'growing-circle', 'ellipsis', 'cube-grid', 'rotating-dots'.
+
+-   `spinnerColor`: A simple string (red) or hex formatted color (#ff0000).
+
+-   `coverContainer`: A boolean value to determine if it should fully cover the parent container. Make sure to set the parent container's position to relative.
+
+-   `overlayColor`: A simple string (white) or hex formatted color representing the color of the overlay. The overlay only shows up if `coverContainer` is true. Defaults to #ffffff;
+
+-   `overlayOpacity`: A number representing the opacity of the overlay. The overlay only shows up if `coverContainer` is true. Defaults to 0.5;
