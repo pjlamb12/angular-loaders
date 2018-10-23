@@ -1,9 +1,9 @@
 {
 	"name": "ng-loaders",
-	"version": "2.2.0",
+	"version": "2.3.0",
 	"peerDependencies": {
-		"@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-		"@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+		"@angular/common": "^6.0.0 || ^7.0.0",
+		"@angular/core": "^6.0.0 || ^7.0.0"
 	},
 	"description": "Angular component to add CSS loaders to your application",
 	"license": "MIT",
