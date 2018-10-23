@@ -1,6 +1,6 @@
 {
 	"name": "ng-loaders",
-	"version": "2.4.0",
+	"version": "2.4.2",
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
@@ -8,6 +8,7 @@
 		"build:lib": "ng build --prod angular-loaders-lib",
 		"pack:lib": "cd dist/angular-loaders-lib && npm pack",
 		"package": "npm run build:lib && npm run pack:lib",
+		"deploy": "npm run package && npm publish dist/angular-loaders-lib",
 		"test": "ng test",
 		"lint": "ng lint",
 		"e2e": "ng e2e"
