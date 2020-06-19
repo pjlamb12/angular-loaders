@@ -22,6 +22,8 @@ There are 5 possible inputs:
 
 -   `coverContainer`: A boolean value to determine if it should fully cover the parent container. Make sure to set the parent container's position to relative.
 
+-   `fixed`: A boolean value to determine if its position should be set to fixed.
+
 -   `overlayColor`: A simple string (white) or hex formatted color representing the color of the overlay. The overlay only shows up if `coverContainer` is true. Defaults to #ffffff;
 
 -   `overlayOpacity`: A number representing the opacity of the overlay. The overlay only shows up if `coverContainer` is true. Defaults to 0.5;
