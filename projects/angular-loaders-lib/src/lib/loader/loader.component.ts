@@ -10,6 +10,7 @@ export class LoaderComponent implements OnInit {
 	@Input() spinnerType: string;
 	@Input() spinnerColor: string;
 	@Input() coverContainer: boolean;
+	@Input() fixed: boolean;
 	@Input() overlayColor: string;
 	@Input() overlayOpacity: number;
 

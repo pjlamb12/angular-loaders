@@ -1,32 +1,37 @@
-<div class="ng-loader-container" [ngClass]="{'cover-container': coverContainer }">
-  <div *ngIf="coverContainer" class="overlay" [style.backgroundColor]="overlayColor" [style.opacity]="overlayOpacity"></div>
-  <div [ngSwitch]="spinnerType">
-    <div *ngSwitchCase="spinnerTypes.rotatingSquare">
-      <ngx-rotating-square [spinnerColor]="spinnerColor"></ngx-rotating-square>
-    </div>
-    <div *ngSwitchCase="spinnerTypes.pulsingCircles">
-      <ngx-pulsing-circles [spinnerColor]="spinnerColor"></ngx-pulsing-circles>
-    </div>
-    <div *ngSwitchCase="spinnerTypes.growingBars">
-      <ngx-growing-bars [spinnerColor]="spinnerColor"></ngx-growing-bars>
-    </div>
-    <div *ngSwitchCase="spinnerTypes.rotatingCubes">
-      <ngx-rotating-cubes [spinnerColor]="spinnerColor"></ngx-rotating-cubes>
-    </div>
-    <div *ngSwitchCase="spinnerTypes.growingCircle">
-      <ngx-growing-circle [spinnerColor]="spinnerColor"></ngx-growing-circle>
-    </div>
-    <div *ngSwitchCase="spinnerTypes.ellipsis">
-      <ngx-ellipsis [spinnerColor]="spinnerColor"></ngx-ellipsis>
-    </div>
-    <div *ngSwitchCase="spinnerTypes.cubeGrid">
-      <ngx-cube-grid [spinnerColor]="spinnerColor"></ngx-cube-grid>
-    </div>
-    <div *ngSwitchCase="spinnerTypes.rotatingDots">
-      <ngx-rotating-dots [spinnerColor]="spinnerColor"></ngx-rotating-dots>
-    </div>
-    <div *ngSwitchDefault>
-      <ngx-rotating-square [spinnerColor]="spinnerColor"></ngx-rotating-square>
-    </div>
-  </div>
+<div class="ng-loader-container" [ngClass]="{ 'cover-container': coverContainer, fixed: fixed }">
+	<div
+		*ngIf="coverContainer || fixed"
+		class="overlay"
+		[style.backgroundColor]="overlayColor"
+		[style.opacity]="overlayOpacity"
+	></div>
+	<div [ngSwitch]="spinnerType">
+		<div *ngSwitchCase="spinnerTypes.rotatingSquare">
+			<ngx-rotating-square [spinnerColor]="spinnerColor"></ngx-rotating-square>
+		</div>
+		<div *ngSwitchCase="spinnerTypes.pulsingCircles">
+			<ngx-pulsing-circles [spinnerColor]="spinnerColor"></ngx-pulsing-circles>
+		</div>
+		<div *ngSwitchCase="spinnerTypes.growingBars">
+			<ngx-growing-bars [spinnerColor]="spinnerColor"></ngx-growing-bars>
+		</div>
+		<div *ngSwitchCase="spinnerTypes.rotatingCubes">
+			<ngx-rotating-cubes [spinnerColor]="spinnerColor"></ngx-rotating-cubes>
+		</div>
+		<div *ngSwitchCase="spinnerTypes.growingCircle">
+			<ngx-growing-circle [spinnerColor]="spinnerColor"></ngx-growing-circle>
+		</div>
+		<div *ngSwitchCase="spinnerTypes.ellipsis">
+			<ngx-ellipsis [spinnerColor]="spinnerColor"></ngx-ellipsis>
+		</div>
+		<div *ngSwitchCase="spinnerTypes.cubeGrid">
+			<ngx-cube-grid [spinnerColor]="spinnerColor"></ngx-cube-grid>
+		</div>
+		<div *ngSwitchCase="spinnerTypes.rotatingDots">
+			<ngx-rotating-dots [spinnerColor]="spinnerColor"></ngx-rotating-dots>
+		</div>
+		<div *ngSwitchDefault>
+			<ngx-rotating-square [spinnerColor]="spinnerColor"></ngx-rotating-square>
+		</div>
+	</div>
 </div>
