@@ -1,5 +1,6 @@
 .ng-loader-container {
-	&.cover-container {
+	&.cover-container,
+	&.fixed {
 		display: flex;
 		height: 100%;
 		width: 100%;
@@ -20,6 +21,14 @@
 			right: 0;
 			background-color: #ffffff;
 			opacity: 0.5;
+		}
+	}
+
+	&.fixed {
+		position: fixed;
+
+		.overlay {
+			position: fixed;
 		}
 	}
 }

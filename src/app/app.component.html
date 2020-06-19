@@ -1,44 +1,55 @@
 <app-navigation></app-navigation>
 <div class="container">
-  <div class="row">
-    <div class="col text-center">
-      <h1>ng-loaders</h1>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <select #spinnerTypeSelect name="spinnerTypeSelect" id="spinner-type-select" class="custom-select" (change)="setSpinnerType(spinnerTypeSelect.value)">
-        <option value="rotating-square">Rotating Square</option>
-        <option value="rotating-dots">Rotating Dots</option>
-        <option value="pulsing-circles">Pulsing Circles</option>
-        <option value="growing-bars">Growing Bars</option>
-        <option value="rotating-cubes">Rotating Cubes</option>
-        <option value="growing-circle">Growing Circle</option>
-        <option value="ellipsis">Ellipsis</option>
-        <option value="cube-grid">Cube Grid</option>
-      </select>
-      <select #spinnerColorSelect name="spinnerColorSelect" id="spinner-type-select" class="custom-select" (change)="setSpinnerType(spinnerColorSelect.value)">
-        <option value="black">Black</option>
-        <option value="red">Red</option>
-        <option value="yellow">Yellow</option>
-        <option value="orange">Orange</option>
-        <option value="blue">Blue</option>
-      </select>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <br>
-      <ngx-loader [spinnerType]="spinnerTypeSelect.value" [spinnerColor]="spinnerColorSelect.value">
-      </ngx-loader>
-      <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="test-container">
-        <ngx-loader [coverContainer]="true" overlayColor="#333333" overlayOpacity=".8"></ngx-loader>
-      </div>
-    </div>
-  </div>
+	<div class="row">
+		<div class="col text-center">
+			<h1>ng-loaders</h1>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-md-4">
+			<select
+				#spinnerTypeSelect
+				name="spinnerTypeSelect"
+				id="spinner-type-select"
+				class="custom-select"
+				(change)="setSpinnerType(spinnerTypeSelect.value)"
+			>
+				<option value="rotating-square">Rotating Square</option>
+				<option value="rotating-dots">Rotating Dots</option>
+				<option value="pulsing-circles">Pulsing Circles</option>
+				<option value="growing-bars">Growing Bars</option>
+				<option value="rotating-cubes">Rotating Cubes</option>
+				<option value="growing-circle">Growing Circle</option>
+				<option value="ellipsis">Ellipsis</option>
+				<option value="cube-grid">Cube Grid</option>
+			</select>
+			<select
+				#spinnerColorSelect
+				name="spinnerColorSelect"
+				id="spinner-type-select"
+				class="custom-select"
+				(change)="setSpinnerType(spinnerColorSelect.value)"
+			>
+				<option value="black">Black</option>
+				<option value="red">Red</option>
+				<option value="yellow">Yellow</option>
+				<option value="orange">Orange</option>
+				<option value="blue">Blue</option>
+			</select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<br />
+			<ngx-loader [spinnerType]="spinnerTypeSelect.value" [spinnerColor]="spinnerColorSelect.value"> </ngx-loader>
+			<br />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="test-container">
+				<ngx-loader [coverContainer]="true" overlayColor="#333333" overlayOpacity=".8"></ngx-loader>
+			</div>
+		</div>
+	</div>
 </div>
