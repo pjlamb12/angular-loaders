@@ -1,4 +1,4 @@
 <div class="spinner rotating-dots">
-	<div [style.backgroundColor]="spinnerColor" class="dot1"></div>
-	<div [style.backgroundColor]="spinnerColor" class="dot2"></div>
+	<div [style.backgroundColor]="spinnerColor | safeCssVar" class="dot1"></div>
+	<div [style.backgroundColor]="spinnerColor | safeCssVar" class="dot2"></div>
 </div>
