@@ -11,6 +11,7 @@ import { EllipsisComponent } from './ellipsis/ellipsis.component';
 import { CubeGridComponent } from './cube-grid/cube-grid.component';
 import { RotatingDotsComponent } from './rotating-dots/rotating-dots.component';
 import { NgLoadersConfig } from './ng-loaders-config';
+import { SafeCssVariablePipe } from './safe-css-variable.pipe';
 
 @NgModule({
 	imports: [CommonModule],
@@ -24,6 +25,7 @@ import { NgLoadersConfig } from './ng-loaders-config';
 		EllipsisComponent,
 		CubeGridComponent,
 		RotatingDotsComponent,
+		SafeCssVariablePipe
 	],
 	exports: [LoaderComponent],
 })
