@@ -30,7 +30,7 @@ import { SafeCssVariablePipe } from './safe-css-variable.pipe';
 	exports: [LoaderComponent],
 })
 export class NgLoadersModule {
-	static forRoot(config: NgLoadersConfig): ModuleWithProviders {
+	static forRoot(config: NgLoadersConfig): ModuleWithProviders<NgLoadersModule> {
 		return {
 			ngModule: NgLoadersModule,
 			providers: [{ provide: NgLoadersConfig, useValue: config }],
