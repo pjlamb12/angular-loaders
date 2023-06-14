@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+	standalone: true,
+	imports: [NxWelcomeComponent, RouterModule],
+	selector: 'angular-loaders-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'app';
-  public spinnerType: string = 'rotating-square';
-
-  setSpinnerType(type: any) {
-    this.spinnerType = type;
-  }
+	title = 'angular-loaders';
 }
