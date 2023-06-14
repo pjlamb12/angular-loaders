@@ -1,0 +1,31 @@
+{
+  "name": "ng-loaders",
+  "version": "4.0.0",
+  "peerDependencies": {
+    "@angular/common": ">=13.0.0",
+    "@angular/core": ">=13.0.0"
+  },
+  "description": "Angular component to add CSS loaders to your application",
+  "license": "MIT",
+  "author": {
+    "name": "Preston Lamb",
+    "email": "preston@prestonlamb.com",
+    "url": "http://www.prestonlamb.com"
+  },
+  "maintainers": [
+    "Preston Lamb"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pjlamb12/angular-loaders"
+  },
+  "homepage": "http://ngl.oss.prestonlamb.com",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "keywords": [
+    "angular",
+    "loaders",
+    "css loaders"
+  ]
+}
