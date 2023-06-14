@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "nx serve",
     "build": "nx build",
+    "build:app": "nx build angular-loaders",
     "build:lib": "nx build --configuration production angular-loaders-lib",
     "pack:lib": "cd dist/angular-loaders-lib && npm pack",
     "package": "npm run build:lib && npm run pack:lib",
@@ -12,6 +13,7 @@
     "test": "nx test",
     "lint": "nx lint",
     "e2e": "nx e2e",
+    "nx": "nx",
     "postinstall": "ngcc"
   },
   "private": true,
