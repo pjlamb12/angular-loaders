@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { LoaderComponent } from 'ng-loaders';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
 	standalone: true,
-	imports: [NxWelcomeComponent, RouterModule],
+	imports: [NxWelcomeComponent, LoaderComponent],
 	selector: 'angular-loaders-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss'],

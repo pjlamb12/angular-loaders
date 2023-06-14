@@ -1,1 +1,1 @@
-export * from './lib/ng-loaders.module';
+export * from './lib/loader/loader.component';
