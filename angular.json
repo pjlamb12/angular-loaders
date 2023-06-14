@@ -138,7 +138,6 @@
       }
     }
   },
-  "defaultProject": "angular-loaders",
   "cli": {
     "analytics": "6faffdfa-c2f1-430e-b9e6-10f3bdb1bb28"
   }
