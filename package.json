@@ -13,8 +13,7 @@
     "test": "nx test",
     "lint": "nx lint",
     "e2e": "nx e2e",
-    "nx": "nx",
-    "postinstall": "ngcc"
+    "nx": "nx"
   },
   "private": true,
   "dependencies": {
