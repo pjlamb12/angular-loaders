@@ -17,7 +17,7 @@
 	display: inline-block;
 	position: absolute;
 	top: 0;
-	background-color: var(--spinnerColor);
+	background-color: var(--spinnerColor, var(--defaultSpinnerColor));
 	border-radius: 100%;
 
 	-webkit-animation: sk-bounce 2s infinite ease-in-out;

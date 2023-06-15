@@ -1,7 +1,7 @@
 .spinner {
 	width: 40px;
 	height: 40px;
-	background-color: var(--spinnerColor);
+	background-color: var(--spinnerColor, var(--defaultSpinnerColor));
 	z-index: 11;
 
 	margin: 0 auto;

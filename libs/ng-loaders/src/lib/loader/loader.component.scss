@@ -1,4 +1,6 @@
 .ng-loader-container {
+	--defaultSpinnerColor: blue;
+
 	&.cover-container,
 	&.fixed {
 		display: flex;

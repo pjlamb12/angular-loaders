@@ -8,7 +8,7 @@
 .spinner > div {
 	width: 18px;
 	height: 18px;
-	background-color: var(--spinnerColor);
+	background-color: var(--spinnerColor, var(--defaultSpinnerColor));
 
 	border-radius: 100%;
 	display: inline-block;

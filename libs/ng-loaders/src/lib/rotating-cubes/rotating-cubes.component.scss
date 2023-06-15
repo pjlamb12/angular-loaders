@@ -8,7 +8,7 @@
 
 .cube1,
 .cube2 {
-	background-color: var(--spinnerColor);
+	background-color: var(--spinnerColor, var(--defaultSpinnerColor));
 	width: 15px;
 	height: 15px;
 	position: absolute;
