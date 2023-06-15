@@ -50,8 +50,6 @@ export class LoaderComponent {
 	@Input({ required: true }) spinnerType!: SpinnerType;
 	@Input() coverContainer = false;
 	@Input() fixed: boolean = false;
-	@Input() overlayColor = '#ffffff';
-	@Input() overlayOpacity = 0.5;
 
 	constructor() {}
 }

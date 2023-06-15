@@ -1,5 +1,7 @@
 .ng-loader-container {
 	--defaultSpinnerColor: blue;
+	--defaultOverlayColor: #ffffff;
+	--defaultOverlayOpacity: 0.5;
 
 	&.cover-container,
 	&.fixed {
@@ -21,8 +23,8 @@
 			bottom: 0;
 			left: 0;
 			right: 0;
-			background-color: #ffffff;
-			opacity: 0.5;
+			background-color: var(--overlayColor, var(--defaultOverlayColor));
+			opacity: var(--overlayOpacity, var(--defaultOverlayOpacity));
 		}
 	}
 
