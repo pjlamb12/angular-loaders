@@ -2,12 +2,7 @@
 	class="ng-loader-container"
 	[ngClass]="{ 'cover-container': coverContainer, fixed }"
 >
-	<div
-		*ngIf="coverContainer || fixed"
-		class="overlay"
-		[style.backgroundColor]="overlayColor"
-		[style.opacity]="overlayOpacity"
-	></div>
+	<div *ngIf="coverContainer || fixed" class="overlay"></div>
 	<ng-container [ngSwitch]="spinnerType">
 		<ng-container *ngSwitchCase="'rotating-square'">
 			<ngx-rotating-square></ngx-rotating-square>

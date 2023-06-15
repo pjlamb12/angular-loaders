@@ -1,1 +1,22 @@
-<ngx-loader spinnerType="ellipsis"></ngx-loader>
+<form [formGroup]="spinnerDemoForm" class="flex gap-4">
+	<div class="w-1/2">
+		<label for=""></label>
+		<select formControlName="spinnerColor">
+			<option *ngFor="let opt of colorOptions" [value]="opt">
+				{{ opt | uppercase }}
+			</option>
+		</select>
+	</div>
+	<div class="w-1/2">
+		<label for=""></label>
+		<select formControlName="spinnerType">
+			<option *ngFor="let opt of spinnerTypeOptions" [value]="opt">
+				{{ opt }}
+			</option>
+		</select>
+	</div>
+</form>
+
+<ng-container *ngIf="formValues$ | async as formValues">
+	<ngx-loader [spinnerType]="formValues.spinnerType"></ngx-loader>
+</ng-container>
