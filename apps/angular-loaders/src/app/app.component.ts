@@ -1,22 +1,22 @@
 import { Component } from '@angular/core';
 import { LoaderComponent, SpinnerType } from 'ng-loaders';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Observable, map, startWith, tap } from 'rxjs';
 import { AsyncPipe, NgFor, NgIf, UpperCasePipe } from '@angular/common';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
 	standalone: true,
 	imports: [
-		NxWelcomeComponent,
 		LoaderComponent,
 		NgIf,
 		AsyncPipe,
 		ReactiveFormsModule,
 		NgFor,
 		UpperCasePipe,
+		NavbarComponent,
 	],
-	selector: 'angular-loaders-root',
+	selector: 'al-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss'],
 })

@@ -9,7 +9,7 @@
 					"error",
 					{
 						"type": "attribute",
-						"prefix": "angularLoaders",
+						"prefix": "al",
 						"style": "camelCase"
 					}
 				],
@@ -17,12 +17,15 @@
 					"error",
 					{
 						"type": "element",
-						"prefix": "angular-loaders",
+						"prefix": "al",
 						"style": "kebab-case"
 					}
 				]
 			},
-			"extends": ["plugin:@nx/angular", "plugin:@angular-eslint/template/process-inline-templates"]
+			"extends": [
+				"plugin:@nx/angular",
+				"plugin:@angular-eslint/template/process-inline-templates"
+			]
 		},
 		{
 			"files": ["*.html"],

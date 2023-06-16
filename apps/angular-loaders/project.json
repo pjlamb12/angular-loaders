@@ -2,7 +2,7 @@
 	"name": "angular-loaders",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"projectType": "application",
-	"prefix": "angular-loaders",
+	"prefix": "al",
 	"sourceRoot": "apps/angular-loaders/src",
 	"tags": [],
 	"targets": {
@@ -15,7 +15,10 @@
 				"main": "apps/angular-loaders/src/main.ts",
 				"polyfills": ["zone.js"],
 				"tsConfig": "apps/angular-loaders/tsconfig.app.json",
-				"assets": ["apps/angular-loaders/src/favicon.ico", "apps/angular-loaders/src/assets"],
+				"assets": [
+					"apps/angular-loaders/src/favicon.ico",
+					"apps/angular-loaders/src/assets"
+				],
 				"styles": ["apps/angular-loaders/src/styles.scss"],
 				"scripts": []
 			},
@@ -68,7 +71,10 @@
 			"executor": "@nx/linter:eslint",
 			"outputs": ["{options.outputFile}"],
 			"options": {
-				"lintFilePatterns": ["apps/angular-loaders/**/*.ts", "apps/angular-loaders/**/*.html"]
+				"lintFilePatterns": [
+					"apps/angular-loaders/**/*.ts",
+					"apps/angular-loaders/**/*.html"
+				]
 			}
 		},
 		"test": {
