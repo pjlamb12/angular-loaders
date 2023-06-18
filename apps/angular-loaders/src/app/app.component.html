@@ -1,6 +1,7 @@
 <al-navbar></al-navbar>
 
 <div class="mx-auto w-full md:w-1/2 lg:w-1/3">
+	<h2 class="p-4 mb-6 font-semibold">View The Different Spinners</h2>
 	<form [formGroup]="spinnerDemoForm" class="flex gap-4 mb-12 p-4">
 		<div class="w-1/2">
 			<label class="block" for="spinnerColor"> Spinner Color </label>
@@ -31,4 +32,13 @@
 	<ng-container *ngIf="formValues$ | async as formValues">
 		<ngx-loader [spinnerType]="formValues.spinnerType"></ngx-loader>
 	</ng-container>
+
+	<h2 class="mt-8 font-semibold mb-4 p-4">coverContainer Spinner Demo</h2>
+
+	<div class="relative h-60 bg-gray-300">
+		<ngx-loader
+			spinnerType="cube-grid"
+			[coverContainer]="true"
+		></ngx-loader>
+	</div>
 </div>
