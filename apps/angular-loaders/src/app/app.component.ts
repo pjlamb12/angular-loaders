@@ -4,6 +4,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Observable, map, startWith, tap } from 'rxjs';
 import { AsyncPipe, NgFor, NgIf, UpperCasePipe } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NG_LOADERS_CONFIG } from 'libs/ng-loaders/src/lib/injection-token';
 
 @Component({
 	standalone: true,
@@ -19,6 +20,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 	selector: 'al-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss'],
+	providers: [
+		{
+			provide: NG_LOADERS_CONFIG,
+			useFactory: () => ({ spinnerType: 'rotating-dots' }),
+		},
+	],
 })
 export class AppComponent {
 	spinnerTypeOptions: SpinnerType[] = [
