@@ -1,5 +1,6 @@
 import {
 	NgClass,
+	NgComponentOutlet,
 	NgIf,
 	NgSwitch,
 	NgSwitchCase,
@@ -34,14 +35,7 @@ export type SpinnerType =
 		NgSwitch,
 		NgSwitchCase,
 		NgSwitchDefault,
-		RotatingCubesComponent,
-		CubeGridComponent,
-		EllipsisComponent,
-		GrowingBarsComponent,
-		GrowingCircleComponent,
-		PulsingCirclesComponent,
-		RotatingDotsComponent,
-		RotatingSquareComponent,
+		NgComponentOutlet,
 	],
 	templateUrl: './loader.component.html',
 	styleUrls: ['./loader.component.scss'],
@@ -50,6 +44,16 @@ export class LoaderComponent {
 	@Input({ required: true }) spinnerType!: SpinnerType;
 	@Input() coverContainer = false;
 	@Input() fixed: boolean = false;
+	componentsMap = {
+		'cube-grid': CubeGridComponent,
+		ellipsis: EllipsisComponent,
+		'growing-bars': GrowingBarsComponent,
+		'growing-circle': GrowingCircleComponent,
+		'pulsing-circles': PulsingCirclesComponent,
+		'rotating-cubes': RotatingCubesComponent,
+		'rotating-dots': RotatingDotsComponent,
+		'rotating-square': RotatingSquareComponent,
+	};
 
 	constructor() {}
 }

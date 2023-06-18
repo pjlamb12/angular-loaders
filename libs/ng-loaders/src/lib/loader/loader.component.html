@@ -3,33 +3,7 @@
 	[ngClass]="{ 'cover-container': coverContainer, fixed }"
 >
 	<div *ngIf="coverContainer || fixed" class="overlay"></div>
-	<ng-container [ngSwitch]="spinnerType">
-		<ng-container *ngSwitchCase="'rotating-square'">
-			<ngx-rotating-square></ngx-rotating-square>
-		</ng-container>
-		<ng-container *ngSwitchCase="'pulsing-circles'">
-			<ngx-pulsing-circles></ngx-pulsing-circles>
-		</ng-container>
-		<ng-container *ngSwitchCase="'growing-bars'">
-			<ngx-growing-bars></ngx-growing-bars>
-		</ng-container>
-		<ng-container *ngSwitchCase="'rotating-cubes'">
-			<ngx-rotating-cubes></ngx-rotating-cubes>
-		</ng-container>
-		<ng-container *ngSwitchCase="'growing-circle'">
-			<ngx-growing-circle></ngx-growing-circle>
-		</ng-container>
-		<ng-container *ngSwitchCase="'ellipsis'">
-			<ngx-ellipsis></ngx-ellipsis>
-		</ng-container>
-		<ng-container *ngSwitchCase="'cube-grid'">
-			<ngx-cube-grid></ngx-cube-grid>
-		</ng-container>
-		<ng-container *ngSwitchCase="'rotating-dots'">
-			<ngx-rotating-dots></ngx-rotating-dots>
-		</ng-container>
-		<ng-container *ngSwitchDefault>
-			<ngx-rotating-square></ngx-rotating-square>
-		</ng-container>
-	</ng-container>
+	<ng-container
+		*ngComponentOutlet="componentsMap[spinnerType]"
+	></ng-container>
 </div>
