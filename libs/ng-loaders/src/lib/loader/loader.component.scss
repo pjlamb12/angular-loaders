@@ -23,8 +23,11 @@
 			bottom: 0;
 			left: 0;
 			right: 0;
-			background-color: var(--overlayColor, var(--defaultOverlayColor));
-			opacity: var(--overlayOpacity, var(--defaultOverlayOpacity));
+			background-color: var(
+				--spinnerOverlayColor,
+				var(--defaultOverlayColor)
+			);
+			opacity: var(--spinnerOverlayOpacity, var(--defaultOverlayOpacity));
 		}
 	}
 
