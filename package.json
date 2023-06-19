@@ -2,7 +2,19 @@
 	"name": "@angular-loaders/source",
 	"version": "0.0.0",
 	"license": "MIT",
-	"scripts": {},
+	"scripts": {
+		"start": "nx serve",
+		"build": "nx build",
+		"build:app": "nx build angular-loaders",
+		"build:lib": "nx build --configuration production angular-loaders-lib",
+		"pack:lib": "cd dist/angular-loaders-lib && npm pack",
+		"package": "npm run build:lib && npm run pack:lib",
+		"deploy": "npm run package && npm publish dist/angular-loaders-lib",
+		"test": "nx test",
+		"lint": "nx lint",
+		"e2e": "nx e2e",
+		"nx": "nx"
+	},
 	"private": true,
 	"dependencies": {
 		"@angular/animations": "~16.0.0",
