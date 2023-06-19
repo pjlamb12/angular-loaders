@@ -1,0 +1,9 @@
+<div
+	class="ng-loader-container"
+	[ngClass]="{ 'cover-container': coverContainer, fixed }"
+>
+	<div *ngIf="coverContainer || fixed" class="overlay"></div>
+	<ng-container
+		*ngComponentOutlet="componentsMap[spinnerType]"
+	></ng-container>
+</div>
