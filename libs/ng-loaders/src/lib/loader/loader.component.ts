@@ -28,18 +28,17 @@ export type SpinnerType =
 	| 'rotating-square';
 
 @Component({
-	selector: 'ngx-loader',
-	standalone: true,
-	imports: [
-		NgIf,
-		NgClass,
-		NgSwitch,
-		NgSwitchCase,
-		NgSwitchDefault,
-		NgComponentOutlet,
-	],
-	templateUrl: './loader.component.html',
-	styleUrls: ['./loader.component.scss'],
+    selector: 'ngx-loader',
+    imports: [
+        NgIf,
+        NgClass,
+        NgSwitch,
+        NgSwitchCase,
+        NgSwitchDefault,
+        NgComponentOutlet,
+    ],
+    templateUrl: './loader.component.html',
+    styleUrls: ['./loader.component.scss']
 })
 export class LoaderComponent {
 	private config: NgLoadersConfig = this._injector.get(NG_LOADERS_CONFIG);

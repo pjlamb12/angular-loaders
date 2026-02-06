@@ -7,25 +7,24 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NG_LOADERS_CONFIG } from 'libs/ng-loaders/src/lib/injection-token';
 
 @Component({
-	standalone: true,
-	imports: [
-		LoaderComponent,
-		NgIf,
-		AsyncPipe,
-		ReactiveFormsModule,
-		NgFor,
-		UpperCasePipe,
-		NavbarComponent,
-	],
-	selector: 'al-root',
-	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.scss'],
-	providers: [
-		{
-			provide: NG_LOADERS_CONFIG,
-			useFactory: () => ({ spinnerType: 'rotating-dots' }),
-		},
-	],
+    imports: [
+        LoaderComponent,
+        NgIf,
+        AsyncPipe,
+        ReactiveFormsModule,
+        NgFor,
+        UpperCasePipe,
+        NavbarComponent,
+    ],
+    selector: 'al-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    providers: [
+        {
+            provide: NG_LOADERS_CONFIG,
+            useFactory: () => ({ spinnerType: 'rotating-dots' }),
+        },
+    ]
 })
 export class AppComponent {
 	spinnerTypeOptions: SpinnerType[] = [
