@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'ngx-growing-bars',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './growing-bars.component.html',
     styleUrls: ['./growing-bars.component.scss']
 })

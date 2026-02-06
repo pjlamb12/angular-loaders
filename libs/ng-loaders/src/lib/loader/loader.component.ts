@@ -1,11 +1,4 @@
-import {
-	NgClass,
-	NgComponentOutlet,
-	NgIf,
-	NgSwitch,
-	NgSwitchCase,
-	NgSwitchDefault,
-} from '@angular/common';
+import { NgClass, NgComponentOutlet } from '@angular/common';
 import { Component, Injector, Input } from '@angular/core';
 import { RotatingCubesComponent } from '../rotating-cubes/rotating-cubes.component';
 import { CubeGridComponent } from '../cube-grid/cube-grid.component';
@@ -30,13 +23,9 @@ export type SpinnerType =
 @Component({
     selector: 'ngx-loader',
     imports: [
-        NgIf,
-        NgClass,
-        NgSwitch,
-        NgSwitchCase,
-        NgSwitchDefault,
-        NgComponentOutlet,
-    ],
+    NgClass,
+    NgComponentOutlet
+],
     templateUrl: './loader.component.html',
     styleUrls: ['./loader.component.scss']
 })

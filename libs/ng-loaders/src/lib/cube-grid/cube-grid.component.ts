@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'ngx-cube-grid',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './cube-grid.component.html',
     styleUrls: ['./cube-grid.component.scss']
 })

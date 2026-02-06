@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'ngx-rotating-cubes',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './rotating-cubes.component.html',
     styleUrls: ['./rotating-cubes.component.scss']
 })

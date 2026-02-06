@@ -2,20 +2,18 @@ import { Component } from '@angular/core';
 import { LoaderComponent, SpinnerType } from 'ng-loaders';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Observable, map, startWith, tap } from 'rxjs';
-import { AsyncPipe, NgFor, NgIf, UpperCasePipe } from '@angular/common';
+import { AsyncPipe, UpperCasePipe } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NG_LOADERS_CONFIG } from 'libs/ng-loaders/src/lib/injection-token';
 
 @Component({
     imports: [
-        LoaderComponent,
-        NgIf,
-        AsyncPipe,
-        ReactiveFormsModule,
-        NgFor,
-        UpperCasePipe,
-        NavbarComponent,
-    ],
+    LoaderComponent,
+    AsyncPipe,
+    ReactiveFormsModule,
+    UpperCasePipe,
+    NavbarComponent
+],
     selector: 'al-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],

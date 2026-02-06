@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'ngx-rotating-dots',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './rotating-dots.component.html',
     styleUrls: ['./rotating-dots.component.scss']
 })

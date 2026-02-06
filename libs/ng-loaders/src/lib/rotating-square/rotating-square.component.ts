@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'ngx-rotating-square',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './rotating-square.component.html',
     styleUrls: ['./rotating-square.component.scss']
 })
