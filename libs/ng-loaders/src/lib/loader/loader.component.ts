@@ -1,5 +1,5 @@
 import { NgClass, NgComponentOutlet } from '@angular/common';
-import { Component, Injector, Input } from '@angular/core';
+import { Component, Injector, inject, input } from '@angular/core';
 import { RotatingCubesComponent } from '../rotating-cubes/rotating-cubes.component';
 import { CubeGridComponent } from '../cube-grid/cube-grid.component';
 import { EllipsisComponent } from '../ellipsis/ellipsis.component';
@@ -8,7 +8,7 @@ import { GrowingCircleComponent } from '../growing-circle/growing-circle.compone
 import { PulsingCirclesComponent } from '../pulsing-circles/pulsing-circles.component';
 import { RotatingDotsComponent } from '../rotating-dots/rotating-dots.component';
 import { RotatingSquareComponent } from '../rotating-square/rotating-square.component';
-import { NG_LOADERS_CONFIG, NgLoadersConfig } from '../injection-token';
+import { NG_LOADERS_CONFIG } from '../injection-token';
 
 export type SpinnerType =
 	| 'cube-grid'
@@ -21,19 +21,19 @@ export type SpinnerType =
 	| 'rotating-square';
 
 @Component({
-    selector: 'ngx-loader',
-    imports: [
-    NgClass,
-    NgComponentOutlet
-],
-    templateUrl: './loader.component.html',
-    styleUrls: ['./loader.component.scss']
+	selector: 'ngx-loader',
+	imports: [NgClass, NgComponentOutlet],
+	templateUrl: './loader.component.html',
+	styleUrls: ['./loader.component.scss'],
 })
 export class LoaderComponent {
-	private config: NgLoadersConfig = this._injector.get(NG_LOADERS_CONFIG);
-	@Input() spinnerType: SpinnerType = this.config.spinnerType;
-	@Input() coverContainer = false;
-	@Input() fixed: boolean = false;
+	private config = inject(NG_LOADERS_CONFIG);
+	public injector = inject(Injector);
+
+	spinnerType = input<SpinnerType>(this.config.spinnerType);
+	coverContainer = input(false);
+	fixed = input(false);
+
 	componentsMap = {
 		'cube-grid': CubeGridComponent,
 		ellipsis: EllipsisComponent,
@@ -44,6 +44,4 @@ export class LoaderComponent {
 		'rotating-dots': RotatingDotsComponent,
 		'rotating-square': RotatingSquareComponent,
 	};
-
-	constructor(private _injector: Injector) {}
 }

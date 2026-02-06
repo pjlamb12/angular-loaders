@@ -1,11 +1,11 @@
 <div
-  class="ng-loader-container"
-  [ngClass]="{ 'cover-container': coverContainer, fixed }"
-  >
-  @if (coverContainer || fixed) {
-    <div class="overlay"></div>
-  }
-  <ng-container
-    *ngComponentOutlet="componentsMap[spinnerType]"
-  ></ng-container>
+	class="ng-loader-container"
+	[ngClass]="{ 'cover-container': coverContainer(), fixed: fixed() }"
+>
+	@if (coverContainer() || fixed()) {
+	<div class="overlay"></div>
+	}
+	<ng-container
+		*ngComponentOutlet="componentsMap[spinnerType()]; injector: injector"
+	></ng-container>
 </div>

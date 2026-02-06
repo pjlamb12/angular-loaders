@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LoaderComponent, SpinnerType } from 'ng-loaders';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Observable, map, startWith, tap } from 'rxjs';
@@ -7,24 +7,26 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NG_LOADERS_CONFIG } from 'libs/ng-loaders/src/lib/injection-token';
 
 @Component({
-    imports: [
-    LoaderComponent,
-    AsyncPipe,
-    ReactiveFormsModule,
-    UpperCasePipe,
-    NavbarComponent
-],
-    selector: 'al-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    providers: [
-        {
-            provide: NG_LOADERS_CONFIG,
-            useFactory: () => ({ spinnerType: 'rotating-dots' }),
-        },
-    ]
+	imports: [
+		LoaderComponent,
+		AsyncPipe,
+		ReactiveFormsModule,
+		UpperCasePipe,
+		NavbarComponent,
+	],
+	selector: 'al-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss'],
+	providers: [
+		{
+			provide: NG_LOADERS_CONFIG,
+			useFactory: () => ({ spinnerType: 'rotating-dots' }),
+		},
+	],
 })
 export class AppComponent {
+	private _fb = inject(FormBuilder);
+
 	spinnerTypeOptions: SpinnerType[] = [
 		'cube-grid',
 		'ellipsis',
@@ -60,6 +62,4 @@ export class AppComponent {
 			);
 		})
 	);
-
-	constructor(private _fb: FormBuilder) {}
 }
