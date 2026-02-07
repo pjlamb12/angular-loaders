@@ -1,19 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LoaderComponent, SpinnerType } from 'ng-loaders';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Observable, map, startWith, tap } from 'rxjs';
-import { AsyncPipe, NgFor, NgIf, UpperCasePipe } from '@angular/common';
+import { AsyncPipe, UpperCasePipe } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NG_LOADERS_CONFIG } from 'libs/ng-loaders/src/lib/injection-token';
 
 @Component({
-	standalone: true,
 	imports: [
 		LoaderComponent,
-		NgIf,
 		AsyncPipe,
 		ReactiveFormsModule,
-		NgFor,
 		UpperCasePipe,
 		NavbarComponent,
 	],
@@ -28,6 +25,8 @@ import { NG_LOADERS_CONFIG } from 'libs/ng-loaders/src/lib/injection-token';
 	],
 })
 export class AppComponent {
+	private _fb = inject(FormBuilder);
+
 	spinnerTypeOptions: SpinnerType[] = [
 		'cube-grid',
 		'ellipsis',
@@ -63,6 +62,4 @@ export class AppComponent {
 			);
 		})
 	);
-
-	constructor(private _fb: FormBuilder) {}
 }

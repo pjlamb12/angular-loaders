@@ -1,88 +1,92 @@
 <al-navbar></al-navbar>
 
 <div class="mx-auto w-full md:w-1/2 lg:w-1/3 pb-12">
-	<h2 class="mt-12 mb-6 font-semibold px-4 md:px-0">
-		View The Different Spinners
-	</h2>
-	<p class="px-4 md:px-0">
-		You can change the spinner that displays by setting the
-		<kbd>spinnerType</kbd> input on the component. The color is changed by
-		updating the <kbd>--spinnerColor</kbd> CSS variable.
-	</p>
-	<form [formGroup]="spinnerDemoForm" class="flex gap-4 mb-12 p-4">
-		<div class="w-1/2">
-			<label class="block" for="spinnerColor"> Spinner Color </label>
-			<select
-				class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6"
-				formControlName="spinnerColor"
-				id="spinnerColor"
-			>
-				<option *ngFor="let opt of colorOptions" [value]="opt">
-					{{ opt | uppercase }}
-				</option>
-			</select>
-		</div>
-		<div class="w-1/2">
-			<label for="spinnerType"> Spinner Type </label>
-			<select
-				class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6"
-				formControlName="spinnerType"
-				id="spinnerType"
-			>
-				<option *ngFor="let opt of spinnerTypeOptions" [value]="opt">
-					{{ opt }}
-				</option>
-			</select>
-		</div>
-	</form>
+  <h2 class="mt-12 mb-6 font-semibold px-4 md:px-0">
+    View The Different Spinners
+  </h2>
+  <p class="px-4 md:px-0">
+    You can change the spinner that displays by setting the
+    <kbd>spinnerType</kbd> input on the component. The color is changed by
+    updating the <kbd>--spinnerColor</kbd> CSS variable.
+  </p>
+  <form [formGroup]="spinnerDemoForm" class="flex gap-4 mb-12 p-4">
+    <div class="w-1/2">
+      <label class="block" for="spinnerColor"> Spinner Color </label>
+      <select
+        class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        formControlName="spinnerColor"
+        id="spinnerColor"
+        >
+        @for (opt of colorOptions; track opt) {
+          <option [value]="opt">
+            {{ opt | uppercase }}
+          </option>
+        }
+      </select>
+    </div>
+    <div class="w-1/2">
+      <label for="spinnerType"> Spinner Type </label>
+      <select
+        class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        formControlName="spinnerType"
+        id="spinnerType"
+        >
+        @for (opt of spinnerTypeOptions; track opt) {
+          <option [value]="opt">
+            {{ opt }}
+          </option>
+        }
+      </select>
+    </div>
+  </form>
 
-	<ng-container *ngIf="formValues$ | async as formValues">
-		<ngx-loader [spinnerType]="formValues.spinnerType"></ngx-loader>
-	</ng-container>
+  @if (formValues$ | async; as formValues) {
+    <ngx-loader [spinnerType]="formValues.spinnerType"></ngx-loader>
+  }
 
-	<h2 class="mt-8 font-semibold mb-4 px-4 md:px-0">
-		coverContainer Spinner Demo
-	</h2>
+  <h2 class="mt-8 font-semibold mb-4 px-4 md:px-0">
+    coverContainer Spinner Demo
+  </h2>
 
-	<p class="mb-4 px-4 md:px-0">
-		The loader can cover the entire container with an overlay if you set the
-		<kbd>coverContainer</kbd> input to true.
-	</p>
+  <p class="mb-4 px-4 md:px-0">
+    The loader can cover the entire container with an overlay if you set the
+    <kbd>coverContainer</kbd> input to true.
+  </p>
 
-	<div class="relative h-60 bg-gray-300">
-		<ngx-loader [coverContainer]="true"></ngx-loader>
-	</div>
+  <div class="relative h-60 bg-gray-300">
+    <ngx-loader [coverContainer]="true"></ngx-loader>
+  </div>
 
-	<h2 class="mt-8 font-semibold mb-4 px-4 md:px-0">
-		Set the Default <kbd>spinnerType</kbd>
-	</h2>
-	<p class="px-4 md:px-0">
-		The library uses an InjectionToken to set the default
-		<kbd>spinnerType</kbd>. This makes it so you don't have to provide the
-		<kbd>spinnerType</kbd> input on every ngx-loader component. You can set
-		the default <kbd>spinnerType</kbd> in your root module or root app
-		component like so:
-	</p>
-	<pre class="px-4 md:px-0"><code>
-providers: [
-  {{'{'}}
+  <h2 class="mt-8 font-semibold mb-4 px-4 md:px-0">
+    Set the Default <kbd>spinnerType</kbd>
+  </h2>
+  <p class="px-4 md:px-0">
+    The library uses an InjectionToken to set the default
+    <kbd>spinnerType</kbd>. This makes it so you don't have to provide the
+    <kbd>spinnerType</kbd> input on every ngx-loader component. You can set
+    the default <kbd>spinnerType</kbd> in your root module or root app
+    component like so:
+  </p>
+  <pre class="px-4 md:px-0"><code>
+    providers: [
+    {{'{'}}
     provide: NG_LOADERS_CONFIG,
-    useFactory: () => {{'{'}} 
-      return {{'{'}}
-        spinnerType: 'ellipsis' 
-      {{'}'}}
+    useFactory: () => {{'{'}}
+    return {{'{'}}
+    spinnerType: 'ellipsis'
+    {{'}'}}
     {{'}'}},
-  {{'}'}}
-],
-    </code></pre>
+    {{'}'}}
+    ],
+  </code></pre>
 
-	<h2 class="mt-8 font-semibold mb-4 px-4 md:px-0">Styling the Loader</h2>
-	<p class="px-4 md:px-0">
-		You can style the loader with a couple of CSS variables. The loader's
-		color can be set with the <kbd>--spinnerColor</kbd> CSS variable. You
-		can set the loader's overlay background color with the
-		<kbd>--spinnerOverlayColor</kbd> CSS variable. You can set the loader's
-		overlay opacity with the <kbd>--spinnerOverlayOpacity</kbd> CSS
-		variable.
-	</p>
+  <h2 class="mt-8 font-semibold mb-4 px-4 md:px-0">Styling the Loader</h2>
+  <p class="px-4 md:px-0">
+    You can style the loader with a couple of CSS variables. The loader's
+    color can be set with the <kbd>--spinnerColor</kbd> CSS variable. You
+    can set the loader's overlay background color with the
+    <kbd>--spinnerOverlayColor</kbd> CSS variable. You can set the loader's
+    overlay opacity with the <kbd>--spinnerOverlayOpacity</kbd> CSS
+    variable.
+  </p>
 </div>
